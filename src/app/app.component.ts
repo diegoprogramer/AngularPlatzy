@@ -17,7 +17,7 @@ export class AppComponent {
   telefono = '312740 7896';
 
   //disabled button
-  disabled = true;
+  disabled = false;
   btnDisabled = false;
 
   person  ={
@@ -30,6 +30,35 @@ export class AppComponent {
     age:33
 
   }
+
+  // metodo toogle
+  toggleButton(){
+    this.btnDisabled = !this.btnDisabled;
+  }
+    // metodo  activar button
+    toggleButtonActivar(){
+      this.btnDisabled = true;
+    }
+
+    //age ++
+    ageInc(){
+      this.person.age += 10;
+      console.log('age '+ this.person.age);
+    }
+
+    // on scrroll
+    onScroll(event :Event){
+      const element = event.target as HTMLElement;
+      console.log(element.scrollTop);
+    }
+
+    // tiping
+    tiping(event:Event){
+      const element = event.target as HTMLInputElement;
+      this.person.name= ''+element.value;
+
+      console.log('input');
+    }
 
 
 }

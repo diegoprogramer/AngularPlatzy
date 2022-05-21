@@ -3,8 +3,24 @@
 <h1>
   {{title}}
 </h1>
+<h1> Eventos</h1>
+<button (click) = "toggleButton()">Toggle</button>
+<button (click) = "toggleButtonActivar()">
+  toggleButtonActivar</button>
+
+<input type="text" name="" id="" (keyup)="tiping($event)">
+
+<input type="text"  [(ngModel)]="person.name" >
+  <p>Edad : {{person.age}}</p>
+  <button (click) = "ageInc()">
+    age ++</button>
+
+    <div class="box" (scroll) = "onScroll($event)" >
+
+    </div>
+
 <h1>Propiedades </h1>
-<button [disabled] = "disabled">Enviar</button>
+<button [disabled] = "btnDisabled">Enviar</button>
 <input type="text" [value] = "person.name">
 <progress max ="100" [value] = "person.age"></progress>
 <hr>
